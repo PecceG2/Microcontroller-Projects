@@ -1,0 +1,1 @@
+## Temperature and humidity box with HTTP configuration, Ethernet connection / Standalone mode, buzzer alarm, and i2c display. (SNMP incomming)
