@@ -6,6 +6,7 @@
 #include <DHT.h>
 #include <EEPROM.h>
 
+
 /*
  * WARNING: ADMIN_HARDCODDED_PASSWORD MAY NOT CONTAIN THESE PROTECTED WORDS:
  * config, passwd, sampleTime, humPercentAlert, tempAlert, httpListenPort, or admin
@@ -93,6 +94,7 @@ void initSoftware(){
     delay(3000);
     beginDHCP();
     beginHTTPServer();
+
   }
   
   
@@ -107,6 +109,7 @@ void loop(){
   // Hook for http server
   if(dhcpMode){
     HTTPClientHook();
+    
   }
   // Main check loop
   if(millis() - millisLoopReadDHT >= Config.sample_time){
